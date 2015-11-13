@@ -14,14 +14,12 @@ def home():
 
 @app.route("/results")
 def results():
-    #keywords = []
-    print session["img_url"]
     keywords = image.get_keywords(session["img_url"])
     print keywords
     #image.py recieves imageURL + returns keyword
     #getpage.py receives keyword + returns book information
     info=""
-    #info = getpage.returnBooksInfo("title",keyword)
+    #info = getpage.returnBooksInfo("title",search_term)
     return render_template("results.html",keywords=keywords,info=info)
     
 
