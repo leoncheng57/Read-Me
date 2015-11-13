@@ -1,3 +1,13 @@
+"""
+Not sure if these will work (in terminal)..
+
+export CLARIFAI_APP_ID=e_vr9J23aqXJ343NG5qnpFDjYNz5oWd
+export CLARIFAI_APP_SECRET=mVMHfpOizXEDVaE1kCEshI5gkKEYv7VGhdIXhp5c
+
+export CLARIFAI_APP_ID=mVMHfpOizXEDVaE1kCEshI5gkKEYv7VGhdIXhp5c
+export CLARIFAI_APP_SECRET=e_vr9J23aqXJ343NG5qnpFDjYNz5oWd
+"""
+
 from clarifai.client import ClarifaiApi
 clarifai_api = ClarifaiApi() # assumes environment variables are set.
 
