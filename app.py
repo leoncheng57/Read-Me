@@ -16,16 +16,16 @@ def home():
 def results():
     #keywords = []
     print session["img_url"]
-    keywords = image.get_data(session["img_url"])
+    keywords = image.get_keywords(session["img_url"])
     print keywords
     #image.py recieves imageURL + returns keyword
     #getpage.py receives keyword + returns book information
-    #info=""
+    info=""
     #info = getpage.returnBooksInfo("title",keyword)
-    #return render_template("results.html",keywords=keywords,info=info)
+    return render_template("results.html",keywords=keywords,info=info)
     
 
 if __name__ == "__main__":
     app.debug = True
-    app.secret_key = ""
+    app.secret_key = "Read-Me"
     app.run(host='0.0.0.0',port=8000)
