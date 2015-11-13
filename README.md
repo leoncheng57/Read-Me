@@ -17,4 +17,4 @@ export CLARIFAI_APP_SECRET=<an_application_secret_from_your_account>
 </pre>
 
 ## TODO
-- add instructions about how to install clarifai stuff
+- comments and documentation for everything
