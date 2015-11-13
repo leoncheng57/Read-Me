@@ -16,8 +16,8 @@ def results():
     keyword = ""
     #test.py recieves imageURL + returns keyword
     #getpage.py receives keyword + returns book information
-    info = returnBooksInfo("title",keyword)
-    return render_template("results.html",url=url,info=info)
+    info = getpage.returnBooksInfo("title",keyword)
+    return render_template("results.html",keyword=keyword,info=info)
 
 if __name__ == "__main__":
     app.debug = True
