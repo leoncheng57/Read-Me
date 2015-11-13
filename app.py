@@ -10,18 +10,24 @@ def home():
         return render_template("home.html")
     else:
         session["img_url"] = request.form['img_url']
-        return redirect(url_for("results"))
+        return redirect(url_for("img_results"))
 
 @app.route("/results")
-def results():
+def img_results():
+    """
+    Displays a page with a list of the keywords that match the image
+    """
     keywords = image.get_keywords(session["img_url"])
-    print keywords
-    #image.py recieves imageURL + returns keyword
-    #getpage.py receives keyword + returns book information
-    info=""
-    #info = getpage.returnBooksInfo("title",search_term)
-    return render_template("results.html",keywords=keywords,info=info)
-    
+    session["keywords"] = keywords
+    return render_template("results.html",keywords=keywords)
+
+@app.route("/match")
+def match():
+    """
+    Displays books that match the keywords
+    """    
+    #session["keywords"]
+    return render_template("match.html")
 
 if __name__ == "__main__":
     app.debug = True

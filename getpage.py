@@ -2,7 +2,7 @@ import urllib2
 import json
 
 key = "AIzaSyAbcq5DqVguTNomXJhuQhLp2ZX_0q4pOXY"
-def returnBooksInfo(infoItem,searchterm):
+def get_books_info(infoItem,searchterm):
     """
     Returns specified information for books related to search term given
     Params: String infoItem (ex.: "title"), String searchterm
@@ -12,7 +12,6 @@ def returnBooksInfo(infoItem,searchterm):
     request = urllib2.urlopen(url)
     result = request.read()
     r = json.loads(result)
-
     for i in r['items']:
         if infoItem == "authors":
             for j in i['volumeInfo'][infoItem]:
@@ -23,5 +22,7 @@ def returnBooksInfo(infoItem,searchterm):
     return info
     
 #Testing
-#print returnBooksInfo("title","Happiness")
-#print returnBooksInfo("authors","Happiness")
+#Example: https://www.googleapis.com/books/v1/volumes?q=%22Happiness%22
+#print get_books_info("title","Happiness")
+#print get_books_info("authors","Happiness")
+
