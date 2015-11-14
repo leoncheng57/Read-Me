@@ -12,14 +12,14 @@ def home():
         session["img_url"] = request.form['img_url']
         return redirect(url_for("img_results"))
 
-@app.route("/results")
+@app.route("/img_results")
 def img_results():
     """
     Displays a page with a list of the keywords that match the image
     """
     keywords = image.get_keywords(session["img_url"])
     session["keywords"] = keywords
-    return render_template("results.html",keywords=keywords)
+    return render_template("img_results.html",keywords=keywords)
 
 @app.route("/match")
 def match():
