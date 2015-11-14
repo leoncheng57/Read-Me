@@ -30,8 +30,8 @@ def match():
     """    
     keywords = session["keywords"]
     word = keywords[1]
-    return_string = books.get_info("title", word)
-    return render_template("match.html", return_string=return_string)
+    return_dict = books.get_info(word)
+    return render_template("match.html", return_dict=return_dict)
 
 if __name__ == "__main__":
     app.debug = True
