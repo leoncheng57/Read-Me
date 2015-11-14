@@ -17,6 +17,8 @@ def img_results():
     """
     Displays a page with a list of the keywords that match the image
     """
+    # Just matches the first keyword to the title of the books
+    # May want to improve upon this algorithm in the future^
     keywords = image.get_keywords(session["img_url"])
     session["keywords"] = keywords
     return render_template("img_results.html",keywords=keywords)
@@ -26,8 +28,10 @@ def match():
     """
     Displays books that match the keywords
     """    
-    #session["keywords"]
-    return render_template("match.html")
+    keywords = session["keywords"]
+    word = keywords[1]
+    return_string = books.get_info("title", word)
+    return render_template("match.html", return_string=return_string)
 
 if __name__ == "__main__":
     app.debug = True
