@@ -1,11 +1,8 @@
 """
-Not sure if these will work (in terminal)..
+Try these in your terminal to activate authorization:
 
-export CLARIFAI_APP_ID=e_vr9J23aqXJ343NG5qnpFDjYNz5oWd
+export CLARIFAI_APP_ID=e_vr9J23aqXJ343NG5qnpFDjYNz5oWd-Rj69WB8m
 export CLARIFAI_APP_SECRET=mVMHfpOizXEDVaE1kCEshI5gkKEYv7VGhdIXhp5c
-
-export CLARIFAI_APP_ID=mVMHfpOizXEDVaE1kCEshI5gkKEYv7VGhdIXhp5c
-export CLARIFAI_APP_SECRET=e_vr9J23aqXJ343NG5qnpFDjYNz5oWd
 """
 
 from clarifai.client import ClarifaiApi
@@ -40,13 +37,13 @@ def get_probs(url):
 
 #url1 = "http://www.clarifai.com/img/metro-north.jpg"
 #url1 = "https://static1.squarespace.com/static/5436dcd5e4b05ef245bb78c5/5436e746e4b05fd6079dfcf3/54d9cd14e4b079af934ddbf9/1430947393199/?format=1500w"
-#url1 = "http://images.fastcompany.com/upload/happiness_bulldogdrummond.jpg"
+url1 = "http://images.fastcompany.com/upload/happiness_bulldogdrummond.jpg"
 
-# print url1
+#print url1
 # print
 # print get_data(url1)
 # print
-# print get_keywords(url1)
+print get_keywords(url1)
 # print
 # print get_probs(url1)
 
