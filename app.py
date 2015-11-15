@@ -29,9 +29,10 @@ def match():
     Displays books that match the keywords
     """    
     keywords = session["keywords"]
-    word = keywords[1]
-    return_dict = books.get_info(word)
-    return render_template("match.html", return_dict=return_dict)
+    info ={}
+    for x in keywords:
+        info[x] = books.get_info(x)
+    return render_template("match.html", info=info)
 
 if __name__ == "__main__":
     app.debug = True

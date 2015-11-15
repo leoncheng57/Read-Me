@@ -6,9 +6,24 @@
 </head>
 
 <body>
-{{return_dict}}
+	{% for index in info.keys() %}
+		{% for book in info[index] %}
+			<div class="img">
+				<a target="_self" href= {{info[index][book]["infoLink"]}}>
+				<img src={{info[index][book]["imageLinks"]}} alt="book" width="90" height="120"></a>
+			<div class="desc">{{info[index][book]["title"]}}
+			<br>
+			{{info[index][book]["authors"]}}
+			<br>
+			Number of Pages:{{info[index][book]["pageCount"]}}
+			<br>
+			{{info[index][book]["description"]}}
+			</div>
+			</div>
+		{% endfor %}
+	{% endfor %} 
 <br>
-<center><a href = "home"> back to home </a></center>
+<a href = "home">Back to Home</a>
 </body>
 
 </html>

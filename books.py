@@ -12,9 +12,8 @@ def get_info(searchterm):
     request = urllib2.urlopen(url)
     result = request.read()
     r = json.loads(result)
-
     overallDict={}
-    infoRequested=["authors","description","imageLinks","pageCount"]
+    infoRequested=["infoLink", "title","authors","description","imageLinks","pageCount"]
 
     for book in r['items']:
         individualBookInfo={}
@@ -41,6 +40,6 @@ def get_info(searchterm):
     
 #Testing
 #Example: https://www.googleapis.com/books/v1/volumes?q=%22Happiness%22
-print get_info("Happiness")
+#print get_info("Happiness")
 #print get_info("authors","Happiness")
 
