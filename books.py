@@ -25,13 +25,14 @@ def get_info(searchterm):
 
         for item in infoRequested:
             value = ""
-            if item == "authors":
-                for author in book['volumeInfo']['authors']:
-                    value += author+", "
-            elif item == "imageLinks":
-                value = book['volumeInfo']['imageLinks']['smallThumbnail']
-            elif item in book['volumeInfo']:
-                value = book['volumeInfo'][item]
+            if item in book['volumeInfo']:
+                if item == "authors":
+                    for author in book['volumeInfo']['authors']:
+                        value += author+", "
+                elif item == "imageLinks":
+                    value = book['volumeInfo']['imageLinks']['smallThumbnail']
+                else:
+                    value = book['volumeInfo'][item]
             individualBookInfo[item]=value
                 
         overallDict[dictKey]=individualBookInfo
