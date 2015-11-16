@@ -5,15 +5,15 @@
 - Sean Chu               
 - Leon Cheng            
 
-## Google Books API
-- https://developers.google.com/books/?hl=en
+## APIs Used
+- Google Books: https://developers.google.com/books/?hl=en
+- Clarifai: https://developer.clarifai.com/docs/
 
 ## Instructions to Set Up Clarifai API Python Client
-- https://developer.clarifai.com/docs/
 - https://github.com/Clarifai/clarifai-python
 <pre>
 pip install git+git://github.com/Clarifai/clarifai-python.git
-export CLARIFAI_APP_ID="an_application_id_from_your_account
+export CLARIFAI_APP_ID="an_application_id_from_your_account"
 export CLARIFAI_APP_SECRET="an_application_secret_from_your_account"
 </pre>
 
