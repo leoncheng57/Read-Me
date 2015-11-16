@@ -17,8 +17,6 @@ def img_results():
     """
     Displays a page with a list of the keywords that match the image
     """
-    # Just matches the first keyword to the title of the books
-    # May want to improve upon this algorithm in the future^
     keywords = image.get_keywords(session["img_url"])
     session["keywords"] = keywords
     return render_template("img_results.html",keywords=keywords)
@@ -26,9 +24,11 @@ def img_results():
 @app.route("/match")
 def match():
     """
-    Displays books that match the keywords
+    Displays books that match the top 3 keywords
+    Note: keywords are already sorted by highest probability
     """    
     keywords = session["keywords"]
+    keywords = [keywords[0],keywords[1],keywords[2]]
     info ={}
     for x in keywords:
         info[x] = books.get_info(x)

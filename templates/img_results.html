@@ -6,10 +6,12 @@
 </head>
 
 <body>
-  <h1>Results</h1>
-  {{keywords}}
+  <u><h1>Results</h1></u>
+  {% for w in keywords %}
+  <center>{{w}}</center>
+  {% endfor %}
   <br>
-  <center> <a href = "match"> Move to Match </a> </center>
+  <center> <a href = "match"> <font size = 5> Move on to Match </font> </a> </center>
 </body>
 
 </html>
