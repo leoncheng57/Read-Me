@@ -16,9 +16,9 @@ export CLARIFAI_APP_ID=<an_application_id_from_your_account>
 export CLARIFAI_APP_SECRET=<an_application_secret_from_your_account>
 </pre>
 
+## Documentation
+Located in html folder
+
 ## TODO
 - comments and documentation for everything
 - make everything pretty
-- display images on match.html
-- think of a better way to match 
-- update html documentations files before finalizing project
