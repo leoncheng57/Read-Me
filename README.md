@@ -18,9 +18,9 @@ export CLARIFAI_APP_SECRET="an_application_secret_from_your_account"
 </pre>
 
 
-Can try these in your terminal to activate authorization:
-
+- Can try these in your terminal to activate authorization:
 export CLARIFAI_APP_ID=e_vr9J23aqXJ343NG5qnpFDjYNz5oWd-Rj69WB8m
+<br>
 export CLARIFAI_APP_SECRET=mVMHfpOizXEDVaE1kCEshI5gkKEYv7VGhdIXhp5c
 
 
