@@ -6,6 +6,9 @@ app = Flask(__name__)
 @app.route("/",methods=["GET","POST"])
 @app.route("/home",methods=["GET","POST"])
 def home():
+    """
+    Allows user to submit a URL to an image
+    """
     if request.method=="GET":
         return render_template("home.html")
     else:
@@ -16,6 +19,7 @@ def home():
 def img_results():
     """
     Displays a page with a list of the keywords that match the image
+    keywords are sorted by highest probability
     """
     keywords = image.get_keywords(session["img_url"])
     session["keywords"] = keywords
@@ -25,7 +29,7 @@ def img_results():
 def match():
     """
     Displays books that match the top 3 keywords
-    Note: keywords are already sorted by highest probability
+    Also displays the book's Picture, Link, Title, Author, and Description
     """    
     keywords = session["keywords"]
     keywords = [keywords[0],keywords[1],keywords[2]]

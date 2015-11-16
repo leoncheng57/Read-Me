@@ -31,3 +31,4 @@ export CLARIFAI_APP_SECRET=mVMHfpOizXEDVaE1kCEshI5gkKEYv7VGhdIXhp5c
 
 ## TODO
 - make everything pretty
+- add error handling (ex: bad url input)

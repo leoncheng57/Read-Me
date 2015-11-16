@@ -6,6 +6,7 @@ def get_data(url):
     """
     Returns the entire dictionary provided by the API about the image
     Params: String url
+    (Currently NOT USED)
     """
     result = clarifai_api.tag_image_urls(url)
     return result
@@ -21,6 +22,7 @@ def get_probs(url):
     """
     Returns a list of the probabilities of correctness of each keyword
     Params: String url
+    (Currently NOT USED)
     """
     return clarifai_api.tag_image_urls(url)["results"][0]["result"]["tag"]["probs"]
 
