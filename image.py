@@ -1,9 +1,3 @@
-"""
-Try these in your terminal to activate authorization:
-
-export CLARIFAI_APP_ID=e_vr9J23aqXJ343NG5qnpFDjYNz5oWd-Rj69WB8m
-export CLARIFAI_APP_SECRET=mVMHfpOizXEDVaE1kCEshI5gkKEYv7VGhdIXhp5c
-"""
 
 from clarifai.client import ClarifaiApi
 clarifai_api = ClarifaiApi() # assumes environment variables are set.
