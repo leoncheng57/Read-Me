@@ -41,3 +41,7 @@ export CLARIFAI_APP_SECRET=mVMHfpOizXEDVaE1kCEshI5gkKEYv7VGhdIXhp5c
 ## TODO
 - make everything pretty
 - add error handling (ex: bad url input)
+- update quackpad info
+
+## NOTES
+- Other APIs and Repos: https://www.quackpad.io/pad/5640944724e2fc000338a2bf
