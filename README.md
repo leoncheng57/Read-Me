@@ -2,7 +2,7 @@
 
 Were you ever inspired by an image? Did it spark wondrous ideas in your mind?
 
-Now, with "Read-Me", you can select an image and it will help you find books that are related to the image! 
+Now, with "Read-Me", you can select an image and it will help you find books that are related to that image! 
 
 ## Team
 - Tiffany (Xiuzhen) Lei  
