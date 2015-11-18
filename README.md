@@ -29,6 +29,11 @@ export CLARIFAI_APP_SECRET=mVMHfpOizXEDVaE1kCEshI5gkKEYv7VGhdIXhp5c
 ## Documentation
 - Located in html folder
 
+## Sample Image URLs
+- Train: https://upload.wikimedia.org/wikipedia/commons/a/a7/Transperth_Sets.JPG
+- Ocean: https://upload.wikimedia.org/wikipedia/commons/e/e0/Clouds_over_the_Atlantic_Ocean.jpg
+
+
 ## TODO
 - make everything pretty
 - add error handling (ex: bad url input)
