@@ -6,6 +6,7 @@
 </head>
 
 <body>
+  <center><a href = "home"><font size = "3">Back to Home</font></a></center>
   {% for index in info.keys() %}
   {% for book in info[index] %}
   <div class="img">
@@ -16,17 +17,14 @@
       <br>
       <i>{{info[index][book]["authors"]}}</i>
       <br>
-      Number of Pages:{{info[index][book]["pageCount"]}}
+      Number of Pages: {{info[index][book]["pageCount"]}}
+      <br>
       <br>
       {{info[index][book]["description"]}}
     </div>
   </div>
   {% endfor %}
   {% endfor %} 
-  <br>
-  <br>
-  <hr>
-  <center><a href = "home"><font size = "20">Back to Home</font></a></center>
 </body>
 
 </html>
